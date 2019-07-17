@@ -4,10 +4,12 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/logoDemank"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/splash" />
+        android:layout_centerInParent="true"
+        android:src="@drawable/demank" />
 
     <ProgressBar
         android:id="@+id/progressBar"

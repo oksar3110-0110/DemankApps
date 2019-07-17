@@ -33,6 +33,7 @@ import com.app.ecommerce.Config;
 import com.app.ecommerce.R;
 import com.app.ecommerce.fragments.FragmentCategory;
 import com.app.ecommerce.fragments.FragmentHelp;
+import com.app.ecommerce.fragments.FragmentPembelian;
 import com.app.ecommerce.fragments.FragmentProfile;
 import com.app.ecommerce.fragments.FragmentRecent;
 import com.app.ecommerce.utilities.AppBarLayoutBehavior;
@@ -96,6 +97,9 @@ public class MainActivity extends AppCompatActivity {
                         return true;
                     case R.id.nav_profile:
                         viewPager.setCurrentItem(3);
+                        return true;
+                    case R.id.pembelian:
+                        viewPager.setCurrentItem(4);
                         return true;
                 }
                 return false;
@@ -178,6 +182,8 @@ public class MainActivity extends AppCompatActivity {
                     return new FragmentHelp();
                 case 3:
                     return new FragmentProfile();
+                case 4:
+                    return new FragmentPembelian();
             }
             return null;
         }

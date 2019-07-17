@@ -11,6 +11,7 @@ import android.widget.ProgressBar;
 
 import com.app.ecommerce.Config;
 import com.app.ecommerce.R;
+import com.app.ecommerce.utilities.SessionManager;
 
 public class ActivitySplash extends AppCompatActivity {
 
@@ -18,11 +19,14 @@ public class ActivitySplash extends AppCompatActivity {
     private ProgressBar progressBar;
     long id = 0;
     String url = "";
+    SessionManager mses;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+        mses = new SessionManager(this);
+
 
         if (Config.ENABLE_RTL_MODE) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
@@ -44,41 +48,12 @@ public class ActivitySplash extends AppCompatActivity {
                 progressBar.setVisibility(View.GONE);
 
                 if (!isCancelled) {
-                    if (id == 0) {
-                        if (url.equals("") || url.equals("no_url")) {
-                            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                            startActivity(intent);
-                            finish();
-                        } else {
-                            Intent a = new Intent(getApplicationContext(), MainActivity.class);
-                            startActivity(a);
-
-                            Intent b = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-                            startActivity(b);
-
-                            finish();
-                        }
-                    } else if (id == 1010101010) {
-
-                        Intent a = new Intent(getApplicationContext(), MainActivity.class);
-                        startActivity(a);
-
-                        Intent b = new Intent(getApplicationContext(), ActivityHistory.class);
-                        startActivity(b);
-
+                    if(mses.getSessionLogin()==true){
+                        startActivity(new Intent(ActivitySplash.this, MainActivity.class));
                         finish();
-
                     } else {
-
-                        Intent a = new Intent(getApplicationContext(), MainActivity.class);
-                        startActivity(a);
-
-                        Intent b = new Intent(getApplicationContext(), ActivityNotificationDetail.class);
-                        b.putExtra("product_id", id);
-                        startActivity(b);
-
+                        startActivity(new Intent(ActivitySplash.this, LoginActivity.class));
                         finish();
-
                     }
                 }
             }

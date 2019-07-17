@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="@drawable/bgdef"
+    tools:context=".activities.LoginActivity">
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/demank"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgLogo"
+        android:layout_marginTop="50dp">
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/layem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:inputType="textEmailAddress"
+                android:textSize="21sp"
+                android:hint="Email"
+                android:background="@drawable/drawableedit"
+                android:drawablePadding="10dp"
+                android:paddingHorizontal="10dp" />
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/laypass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true"
+            android:layout_below="@+id/layem">
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@id/etEmail"
+                android:layout_marginTop="31dp"
+                android:drawablePadding="10dp"
+                android:hint="Password"
+                android:background="@drawable/drawableedit"
+                android:inputType="textPassword"
+                android:paddingHorizontal="10dp"
+                android:textSize="21sp" />
+        </android.support.design.widget.TextInputLayout>
+        <TextView
+            android:id="@+id/forgotPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Lupa Password?"
+            android:textColor="@color/white"
+            android:gravity="right"
+            android:layout_below="@+id/laypass"
+            android:layout_marginTop="20dp" />
+        <Button
+            android:id="@+id/loginBT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/green"
+            android:paddingHorizontal="75dp"
+            android:text="LOGIN"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_below="@+id/forgotPass"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="45dp"
+            android:layout_marginBottom="20dp" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/createAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="Belum Punya Akun? Daftar"
+        android:textColor="@color/white"
+        android:gravity="center"
+        />
+</RelativeLayout>
