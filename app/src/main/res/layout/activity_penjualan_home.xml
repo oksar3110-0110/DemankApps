@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".Penjualan.PenjualanHome">
+    <TextView
+        android:id="@+id/titleCate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kategori Barang"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="16sp"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/titleCate">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/framePenjualan"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </androidx.recyclerview.widget.RecyclerView>
+    </ScrollView>
+</RelativeLayout>

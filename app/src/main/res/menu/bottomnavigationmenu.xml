@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/penjualan"
+        android:title="Penjualan"
+        android:icon="@drawable/shopping">
+    </item>
+    <item
+        android:id="@+id/pemesanan"
+        android:title="Pemesanan"
+        android:icon="@drawable/gift">
+    </item>
+    <item
+        android:id="@+id/proFile"
+        android:title="Profiles"
+        android:icon="@drawable/avatar">
+    </item>
+</menu>

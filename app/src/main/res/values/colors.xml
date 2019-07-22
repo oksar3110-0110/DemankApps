@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#7f7f7f</color>
+    <color name="colorAccent">#000</color>
+    <color name="blue1">#2799FA</color>
+    <color name="button_blue">#2799FA</color>
+    <color name="button_grey">#7F7F7F</color>
+    <color name="button_green">#00BF21</color>
+    <color name="chipgreen">#00CA94</color>
+    <color name="white">#FFFFFF</color>
+    <color name="border_edit_text">#E3ECF3</color>
+    <color name="background_card">#F1F8FE</color>
+    <color name="start_gradient">#F8FAFF</color>
+    <color name="center_graient">#E7F3FF</color>
+    <color name="end_gradient">#D8EDFF</color>
+    <color name="transparent2">#90ffffff</color>
+    <color name="transparent3">#10ffffff</color>
+    <color name="transparent4">#90000000</color>
+    <color name="selectchip">#F1F8FE</color>
+    <color name="fontselchip">#8DBDE5</color>
+    <color name="noselchip">#F8F8F8</color>
+    <color name="selchip">#C7C7C7</color>
+
+    <!--color untuk gradient tansition-->
+    <color name="purple_500">#9c27b0</color>
+    <color name="deep_purple_500">#673ab7</color>
+    <color name="indigo_500">#3f51b5</color>
+    <color name="blue_500">#2196f3</color>
+    <color name="cyan_500">#00bcd4</color>
+    <color name="light_blue_500">#03a9f4</color>
+
+    <color name="category_color">#94C9F7</color>
+    <color name="border_category">#95B5D0</color>
+    <color name="gradsave1">#F3AF2D</color>
+    <color name="gradsave2">#F3912D</color>
+    <color name="gradsave3">#F3742D</color>
+    <color name="red">#ff0000</color>
+    <color name="gradcoin1">#797DE5</color>
+    <color name="gradcoin2">#798DE5</color>
+    <color name="gradcoin3">#799EE5</color>
+    <color name="colorLabelFab">#057fa7</color>
+
+    <color name="colornavigation">#2799FA</color>
+    <color name="colornavigationText">#000000</color>
+</resources>
