@@ -51,62 +51,32 @@
 
         </LinearLayout>
 
-        <com.balysv.materialripple.MaterialRippleLayout
-            android:id="@+id/btn_edit_user"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:padding="10dp"
-            app:mrl_rippleAlpha="0.2"
-            app:mrl_rippleHover="true"
-            app:mrl_rippleOverlay="true">
 
             <TextView
+                android:id="@+id/btEdit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="EDIT"
+                android:layout_alignParentRight="true"
                 android:textColor="@color/colorPrimary"
                 android:textSize="18sp"
+                android:layout_margin="20dp"
                 android:textStyle="bold" />
-
-        </com.balysv.materialripple.MaterialRippleLayout>
 
     </RelativeLayout>
 
     <include layout="@layout/include_row_separator" />
 
-    <com.balysv.materialripple.MaterialRippleLayout
-        android:id="@+id/btnLogout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="20dp"
-        app:mrl_rippleAlpha="0.2"
-        app:mrl_rippleHover="true"
-        app:mrl_rippleOverlay="true">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
 
-            <!--<ImageView-->
-                <!--android:layout_width="20dp"-->
-                <!--android:layout_height="20dp"-->
-                <!--android:src="@drawable/ic_privacy" />-->
+
 
             <TextView
+                android:id="@+id/logoutBt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="6dp"
-                android:layout_marginLeft="6dp"
+                android:layout_margin="20dp"
                 android:text="LOGOUT" />
-
-        </LinearLayout>
-
-    </com.balysv.materialripple.MaterialRippleLayout>
 
     <include layout="@layout/include_row_separator" />
 

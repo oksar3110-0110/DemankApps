@@ -17,7 +17,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Register.RegisterActivity"></activity>
+        <activity android:name=".Penjualan.ListProduk"></activity>
+        <activity android:name=".Register.RegisterActivity" />
         <activity android:name=".Details.DetailBarang" />
         <activity android:name=".Dashboard.MainDashboard" />
         <activity android:name=".SplashScreen">
