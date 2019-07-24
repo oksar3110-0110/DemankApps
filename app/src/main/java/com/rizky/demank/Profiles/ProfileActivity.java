@@ -1,5 +1,7 @@
 package com.rizky.demank.Profiles;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -11,11 +13,14 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.rizky.demank.MainActivity;
 import com.rizky.demank.R;
 import com.rizky.demank.Utils.SessionManager;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 import butterknife.OnClick;
+import butterknife.Unbinder;
 
 public class ProfileActivity extends Fragment {
 
@@ -34,6 +39,7 @@ public class ProfileActivity extends Fragment {
     @BindView(R.id.logoutBt)
     TextView logoutBt;
 
+    Unbinder unbinder;
     public static ProfileActivity newINstance() {
         ProfileActivity profileActivity = new ProfileActivity();
         return profileActivity;
@@ -43,15 +49,16 @@ public class ProfileActivity extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.activity_profile, container, false);
-        mSes = new SessionManager(getContext());
+        unbinder = ButterKnife.bind(this, view);
+        mSes = new SessionManager(getActivity());
 
-        txtUserName.setText(mSes.getSessionNama());
-        txtUserAddress.setText(mSes.getSessionAlamat());
         txtUserEmail.setText(mSes.getSessionEmail());
+        txtUserAddress.setText(mSes.getSessionAlamat());
         txtUserPhone.setText(mSes.getSessionNohp());
-
+        txtUserName.setText(mSes.getSessionUsername());
         return view;
     }
+
 
 
     @OnClick({R.id.btEdit, R.id.logoutBt})
@@ -60,8 +67,17 @@ public class ProfileActivity extends Fragment {
             case R.id.btEdit:
                 break;
             case R.id.logoutBt:
-                Log.d("messages :", "logout");
+
+                mSes.saveSessionBoolean(SessionManager.SESSION_LOGIN, false);
+                startActivity(new Intent(getActivity(), MainActivity.class));
+                getActivity().finish();
                 break;
         }
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        unbinder.unbind();
     }
 }

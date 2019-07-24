@@ -1,6 +1,8 @@
 package com.rizky.demank.Utils;
 
 import com.rizky.demank.Login.ResponseLogin;
+import com.rizky.demank.Penjualan.ResponItemPenjualan.ResponseItemPenjualan;
+import com.rizky.demank.Penjualan.ResponseDetail.ResponseDetail;
 import com.rizky.demank.Penjualan.ResponsePenjualan;
 
 import retrofit2.Call;
@@ -21,4 +23,17 @@ public interface RequestInterface {
 
     @GET("api.php?penjualan")
     Call<ResponsePenjualan> getCategoryPenjualan();
+
+    @FormUrlEncoded
+    @POST("api.php?itempenjualan")
+    Call<ResponseItemPenjualan> getItem(
+            @Field("idkat") String idkat
+    );
+
+    @FormUrlEncoded
+    @POST("api.php?detailitem")
+    Call<ResponseDetail> getDetailItem(
+            @Field("id") String iditem
+    );
+
 }
